@@ -42,14 +42,14 @@
 // 3: Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
-//  int FunAkkermana (int naumM, int naumN)
-//  {
-//     if (naumM == 0) return naumN + 1;
-//     else if (naumN == 0) return FunAkkermana(naumM - 1, 1);
-//     else return FunAkkermana(naumM - 1, FunAkkermana(naumM, naumN - 1));
-//  }
-// Console.Write("Enter a number M, non-negative:");
-// int M = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Enter a number N non-negative: ");
-// int N = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine($"Result = {FunAkkermana(M, N )}");
+ int FunAkkermana (int naumM, int naumN)
+ {
+    if (naumM == 0) return naumN + 1;
+    else if (naumN == 0) return FunAkkermana(naumM - 1, 1);
+    else return FunAkkermana(naumM - 1, FunAkkermana(naumM, naumN - 1));
+ }
+Console.Write("Enter a number M, non-negative: ");
+int M = Convert.ToInt32(Console.ReadLine());
+Console.Write("Enter a number N, non-negative: ");
+int N = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Result = {FunAkkermana(M, N )}");
